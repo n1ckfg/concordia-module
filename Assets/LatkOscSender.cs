@@ -12,12 +12,17 @@ public class LatkOscSender : MonoBehaviour {
         foreach (LineRenderer line in solarSystem.lines) {
             Vector3[] points = new Vector3[line.positionCount];
             line.GetPositions(points);
+            OscMessage message = new OscMessage();
+            message.address = "/ccdaline";
+
             foreach (Vector3 point in points) {
-                OscMessage msg = new OscMessage;
-                msg.address = "/foo";
-                osc.Send(msg);
-                Debug.Log(point);
+                message.values.Add(point.x);
+                message.values.Add(point.y);
+                message.values.Add(point.z);
+                //Debug.Log(point);
             }
+
+            osc.Send(message);
         }
 
         yield return new WaitForSeconds(sendInterval);

@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ad855c3428a60459564f344bef8c5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  osc: {fileID: 1729404331}
   solarSystem: {fileID: 2007672042}
   sendInterval: 1
 --- !u!4 &714230716
