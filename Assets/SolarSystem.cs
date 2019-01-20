@@ -25,7 +25,7 @@ public class SolarSystem : MonoBehaviour {
     public Planet planetPrefab;
     List<Planet> planets = new List<Planet>();
     List<Vector3[]> coordinates = new List<Vector3[]>();
-    List<LineRenderer> lines = new List<LineRenderer>();
+    [HideInInspector] public List<LineRenderer> lines = new List<LineRenderer>();
     public int numLines = 100;
     public LineRenderer linePrefab;
 
